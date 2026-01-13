@@ -1,0 +1,23 @@
+{
+  "name": "maintenance-record-app",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "infra",
+    "shared"
+  ],
+  "scripts": {
+    "frontend:dev": "npm run dev -w frontend",
+    "frontend:build": "npm run build -w frontend",
+    "backend:build": "npm run build -w backend",
+    "backend:test": "npm run test -w backend",
+    "infra:deploy": "npm run deploy -w infra",
+    "infra:destroy": "npm run destroy -w infra",
+    "test": "npm run test -w backend && npm run test -w frontend"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
